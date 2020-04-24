@@ -1,13 +1,9 @@
 # simple
-Simple Vugu Example
+Simple Vugu Example site for testing the workflow
 
-You can get started with:
+Just run:
 
-```sh
-go get -u github.com/vugu/vgrun
-vgrun -new-from-example=simple myexample
-cd myexample
-vgrun devserver.go
-```
-
-Then browse to the running server: http://localhost:8844/
+* **make** : to build the wasm site for distribution in the dist/ directory.
+* **make test** : to start a local testing server on port 8844
+   * Then browse to the running server: [http://localhost:8844/](http://localhost:8844)
+* **make clean** : to remove all build files
