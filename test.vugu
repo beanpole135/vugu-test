@@ -1,0 +1,13 @@
+<div class="test">
+	<button @click="c.Toggle(event)">Test</button>
+	<div vg-if='c.A != ""'>
+		<ol>
+		<li><span vg-html='c.A'></span></li>
+		<li><span vg-html='c.B[c.I]'></span></li>
+		<li><span vg-html='c.C'></span></li>
+		<li><span vg-html='c.D'></span></li>
+		<li><span vg-html='c.E["test2"]'></span></li>
+		<li><span :style='"color:"+c.Color' vg-html='c.Color'></span></li>
+		</ol>
+	</div>
+</div>
