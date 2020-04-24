@@ -14,7 +14,7 @@ import (
 
 func main() {
 
-	clean := flag.Bool("clean", true, "Remove dist dir before starting")
+	clean := flag.Bool("clean", false, "Remove dist dir before starting")
 	dist := flag.String("dist", "dist", "Directory to put distribution files in")
 	flag.Parse()
 
