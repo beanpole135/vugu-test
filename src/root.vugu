@@ -1,6 +1,6 @@
 <div>
     <main role="main" class="container text-center">
         <main:Test></main:Test>
-        <main:Test></main:Test>
+
     </main>
 </div>
