@@ -14,5 +14,6 @@ clean:
 	@-rm -r dist
 
 test:
+	make build
 	@go run devserver.go
 
