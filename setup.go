@@ -5,22 +5,20 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
 	"os"
 	"os/exec"
 	"path/filepath"
-	"time"
 
 	"github.com/vugu/vugu/distutil"
 )
 
 func main() {
 
-	clean := flag.Bool("clean", false, "Remove dist dir before starting")
+	clean := flag.Bool("clean", true, "Remove dist dir before starting")
 	dist := flag.String("dist", "dist", "Directory to put distribution files in")
 	flag.Parse()
 
-	start := time.Now()
+	//start := time.Now()
 
 	if *clean {
 		os.RemoveAll(*dist)
@@ -39,11 +37,14 @@ func main() {
 		fmt.Print(distutil.MustExec("go", "get", "github.com/vugu/vugu/cmd/vugugen"))
 	}
 
+       //Handled by the makefile
+        /*
 	// run go generate
 	fmt.Print(distutil.MustExec("go", "generate", "."))
 
 	// run go build for wasm binary
 	fmt.Print(distutil.MustEnvExec([]string{"GOOS=js", "GOARCH=wasm"}, "go", "build", "-o", filepath.Join(*dist, "main.wasm"), "."))
+	*/
 
 	// STATIC INDEX FILE:
 	// if you are hosting with a static file server or CDN, you can write out the default index.html from simplehttp
@@ -57,5 +58,5 @@ func main() {
 	// or if you are deploying a Go server (yay!) you can build that binary here
 	// fmt.Print(distutil.MustExec("go", "build", "-o", filepath.Join(*dist, "server"), "."))
 
-	log.Printf("dist.go complete in %v", time.Since(start))
+	//log.Printf("dist.go complete in %v", time.Since(start))
 }
