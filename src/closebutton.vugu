@@ -1,0 +1,11 @@
+<style>
+.closebutton button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+</style>
+
+<div class="closebutton">
+	<button onclick="closeApp()">Close Application</button>
+</div>

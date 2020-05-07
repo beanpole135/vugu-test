@@ -1,3 +1,9 @@
+<style>
+.test button {
+  color: purple;
+}
+</style>
+
 <div class="test">
 	<button @click="c.Toggle(event)">Test</button>
 	<div vg-if='c.A != ""'>
