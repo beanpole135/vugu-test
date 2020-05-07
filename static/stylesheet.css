@@ -1,0 +1,14 @@
+body {
+    background-color: darkgreen;
+}
+
+.test {
+  color: black;
+  background: red;
+  
+}
+
+.test button {
+  background-color: blue;
+  color: white;
+}

@@ -16,4 +16,3 @@ clean:
 test:
 	make build
 	@go run devserver.go
-

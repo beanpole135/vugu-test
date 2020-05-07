@@ -16,7 +16,8 @@ func main() {
 	mux := devutil.NewMux()
 	mux.Match(devutil.NoFileExt, devutil.DefaultAutoReloadIndex.Replace(
 		`<!-- styles -->`,
-		`<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">`))
+		``))
+	
 	mux.Exact("dist/main.wasm", devutil.NewMainWasmHandler(wc))
 	mux.Exact("dist/wasm_exec.js", devutil.NewWasmExecJSHandler(wc))
 	mux.Default(devutil.NewFileServer().SetDir("dist"))
